@@ -229,7 +229,7 @@ int main() {
         printf("6. View File Content\n");
         printf("7. Save Articles to File\n");
         printf("8. Exit\n");
-        printf("Enter your %schoice%s: ", COLOR_CYAN, COLOR_RESET);
+        printf("Enter the %snumber corresponding to your choice%s: ", COLOR_CYAN, COLOR_RESET);
         scanf("%d", &choice);
         getchar();
 
