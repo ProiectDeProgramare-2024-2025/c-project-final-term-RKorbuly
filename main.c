@@ -6,6 +6,8 @@
 #define MAX_CONTENT 500
 #define MAX_ARTICLES 50
 #define FILE_NAME "articles.txt"
+
+// ANSI color macros
 #define COLOR_RESET   "\033[0m"
 #define COLOR_RED     "\033[31m"
 #define COLOR_GREEN   "\033[32m"
@@ -195,9 +197,9 @@ void viewFile() {
         fav = atoi(line);
 
         printf("\nArticle %d:\n", i + 1);
-        printf("%sTitle%s: %s", COLOR_BLUE, COLOR_RESET, title);
-        printf("%sContent%s: %s", COLOR_BLUE, COLOR_RESET, content);
-        printf("%s%s%s\n", fav ? COLOR_MAGENTA "Favorite: Yes" COLOR_RESET : "Favorite: No");
+        printf("%sTitle%s: %s\n", COLOR_BLUE, COLOR_RESET, articles[i].title);
+        printf("%sContent%s: %s\n", COLOR_BLUE, COLOR_RESET, articles[i].content);
+        printf("%s\n", articles[i].is_favorite ? "Favorite: " COLOR_MAGENTA "Yes" COLOR_RESET : "Favorite:"  COLOR_MAGENTA " No" COLOR_RESET);
     }
     fclose(fp);
     printf("Press" COLOR_YELLOW " Enter" COLOR_RESET " to continue");
