@@ -6,8 +6,6 @@
 #define MAX_CONTENT 500
 #define MAX_ARTICLES 50
 #define FILE_NAME "articles.txt"
-
-// ANSI color macros
 #define COLOR_RESET   "\033[0m"
 #define COLOR_RED     "\033[31m"
 #define COLOR_GREEN   "\033[32m"
